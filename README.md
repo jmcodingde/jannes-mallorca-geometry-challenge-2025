@@ -71,7 +71,7 @@ The main branch contains a placeholder implementation that fails the tests. Your
 2. You can work alone or as a team
 2. Submit your solution by creating a pull request
 
-## 🏆 Success Criteria
+## 🏁 Success Criteria
 
 A successful solution must meet the following requirements:
 
@@ -90,5 +90,9 @@ The final determination of what constitutes a valid solution rests with the chal
 
 - Challenge Start: Mo May 19 2025
 - Submission Deadline: Fri May 23 2025 12:00 CET (might be extended)
+
+## 🏆 Prize
+
+While eternal glory should be enough, the winner of the challenge will also receive the prestigious (and entirely fictional) title of Certified Geometry Enthusiast of Mallorca 2025. This honor will be immortalized in a beautifully rendered virtual trophy—and, of course, in the hearts of all who love polygons.
 
 Good luck and happy solving! 🎉
