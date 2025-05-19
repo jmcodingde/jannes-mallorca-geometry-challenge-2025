@@ -93,6 +93,6 @@ The final determination of what constitutes a valid solution rests with the chal
 
 ## 🏆 Prize
 
-While eternal glory should be enough, the winner of the challenge will also receive the prestigious (and entirely fictional) title of Certified Geometry Enthusiast of Mallorca 2025. This honor will be immortalized in a beautifully rendered virtual trophy—and, of course, in the hearts of all who love polygons.
+While eternal glory should be enough, the winner of the challenge will also receive the prestigious (and entirely fictional) title of Certified Geomethiast of Mallorca 2025. This honor will be immortalized in a beautifully rendered virtual trophy—and, of course, in the hearts of all who love polygons.
 
 Good luck and happy solving! 🎉
