@@ -11,7 +11,6 @@ s = 4.0
 
 # Test cases as (alpha_degrees, expected_r) pairs
 TEST_CASES = [
-    (180.00, 6.35),
     (128.25, 2.18),
     (90.00, 0.00),
     (100.00, 0.29),
@@ -22,6 +21,7 @@ TEST_CASES = [
     (150.00, 4.18),
     (160.00, 5.04),
     (170.00, 5.78),
+    (180.00, 6.35),
 ]
 
 @pytest.mark.parametrize("alpha_degrees,expected_r", TEST_CASES)
