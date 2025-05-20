@@ -62,9 +62,6 @@ def calculate_length_r(alpha_degrees: float, n: float, g: float, i: float, j: fl
 
     Returns:
         float: The calculated length of side r
-
-    Note: This is a placeholder implementation that doesn't solve the actual problem.
-    Participants need to implement the correct formula.
     """
 
     G = Point(0, i)
