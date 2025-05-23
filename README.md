@@ -74,7 +74,7 @@ The main branch contains a placeholder implementation that fails the tests. Your
 The project includes a plotting script (`src/plot.py`) that helps visualize the relationship between angle α and length r. To generate the plots:
 
 ```bash
-python src/plot.py
+python -m src.plot
 ```
 
 This will create a plot in `artifacts/plot.png` showing:
