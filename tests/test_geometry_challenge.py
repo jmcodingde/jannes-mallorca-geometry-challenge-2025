@@ -22,7 +22,7 @@ def test_calculate_alpha_degrees_simple(expected_alpha, r):
        f"Failed for r={r}: expected alpha={expected_alpha}°, got {round(calculated_alpha, 2)}"
 
 @pytest.mark.parametrize("expected_alpha,r", REAL_TEST_CASES)
-def test_calculate_alpha_degrees_real(r, expected_alpha):
+def test_calculate_alpha_degrees_real(expected_alpha, r):
     calculated_alpha = calculate_alpha_degrees(r, n_real, g_real, i_real, j_real, k_real, s_real)
     assert round(calculated_alpha, 2) == expected_alpha, \
         f"Failed for r={r}: expected alpha={expected_alpha}°, got {round(calculated_alpha, 2)}"
