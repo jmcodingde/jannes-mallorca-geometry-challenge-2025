@@ -67,6 +67,22 @@ The main branch contains a placeholder implementation that fails the tests. Your
   - `simplified_geometry.py`: Test cases and constants for simplified geometry
   - `real_world_geometry.py`: Test cases and constants for real-world geometry
 - `.github/workflows/tests.yml`: GitHub Actions workflow that runs tests on every push and PR
+- `src/plot.py`: Contains a script that generates a visualisation
+
+### 📊 Visualization
+
+The project includes a plotting script (`src/plot.py`) that helps visualize the relationship between angle α and length r. To generate the plots:
+
+```bash
+python src/plot.py
+```
+
+This will create a plot in `artifacts/plot.png` showing:
+- The calculated r values (blue line)
+- The test case values (red dots)
+- Separate plots for simplified and real-world geometry
+
+The visualization helps verify the correctness of the implementation by comparing the calculated values against the test cases.
 
 ## 📜 Rules
 

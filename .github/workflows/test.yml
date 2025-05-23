@@ -30,3 +30,14 @@ jobs:
     - name: Run tests
       run: |
         pytest tests/ --cov=src
+
+    - name: Generate plot
+      run: |
+        python -m src.plot
+
+    - name: Upload plot as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: plot
+        path: artifacts/plot.png
+        retention-days: 30
