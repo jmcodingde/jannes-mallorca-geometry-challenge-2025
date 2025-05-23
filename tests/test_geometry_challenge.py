@@ -15,13 +15,13 @@ def test_calculate_length_r_real(alpha_degrees, expected_r):
     assert round(calculated_r, 2) == expected_r, \
         f"Failed for alpha={alpha_degrees}°: expected r={expected_r}, got {round(calculated_r, 2)}"
 
-@pytest.mark.parametrize("r,expected_alpha", [(r, alpha) for alpha, r in SIMPLE_TEST_CASES])
+@pytest.mark.parametrize("expected_alpha,r", SIMPLE_TEST_CASES)
 def test_calculate_alpha_degrees_simple(expected_alpha, r):
    calculated_alpha = calculate_alpha_degrees(r, n_simple, g_simple, i_simple, j_simple, k_simple, s_simple)
    assert round(calculated_alpha, 2) == expected_alpha, \
        f"Failed for r={r}: expected alpha={expected_alpha}°, got {round(calculated_alpha, 2)}"
 
-@pytest.mark.parametrize("r,expected_alpha", [(r, alpha) for alpha, r in REAL_TEST_CASES])
+@pytest.mark.parametrize("expected_alpha,r", REAL_TEST_CASES)
 def test_calculate_alpha_degrees_real(r, expected_alpha):
     calculated_alpha = calculate_alpha_degrees(r, n_real, g_real, i_real, j_real, k_real, s_real)
     assert round(calculated_alpha, 2) == expected_alpha, \
