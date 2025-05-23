@@ -63,6 +63,9 @@ The main branch contains a placeholder implementation that fails the tests. Your
 
 - `src/geometry_challenge.py`: Contains the formula implementation
 - `tests/test_geometry_challenge.py`: Contains the test cases
+- `data/`: Directory containing geometry data
+  - `simplified_geometry.py`: Test cases and constants for simplified geometry
+  - `real_world_geometry.py`: Test cases and constants for real-world geometry
 - `.github/workflows/tests.yml`: GitHub Actions workflow that runs tests on every push and PR
 
 ## 📜 Rules
