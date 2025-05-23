@@ -57,7 +57,7 @@ def plot():
 
     plt.tight_layout()
 
-    # Ensure tmp directory exists
+    # Ensure the artifacts directory exists
     os.makedirs('artifacts', exist_ok=True)
     plt.savefig('artifacts/plot.png', dpi=300, bbox_inches='tight')
     plt.close()
