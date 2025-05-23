@@ -13,48 +13,34 @@ from data.real_world_geometry import (
     TEST_CASES as REAL_TEST_CASES
 )
 
+def plot_geometry(ax, test_cases, n, g, i, j, k, s, title):
+    alphas = np.array([case[0] for case in test_cases])
+    r_expected = np.array([case[1] for case in test_cases])
+
+    # Calculate r values for a continuous range of alpha values
+    alpha_range = np.linspace(min(alphas), max(alphas), 100)
+    r_calculated = np.array([
+        calculate_length_r(alpha, n, g, i, j, k, s)
+        for alpha in alpha_range
+    ])
+
+    ax.plot(alpha_range, r_calculated, 'b-', label='Calculated r')
+    ax.scatter(alphas, r_expected, color='red', label='Test cases')
+    ax.set_title(title)
+    ax.set_xlabel('Alpha (degrees)')
+    ax.set_ylabel('Length r')
+    ax.grid(True)
+    ax.legend()
+
 def plot():
     # Create figure with two subplots
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 12))
 
     # Plot simplified geometry
-    alphas_simple = np.array([case[0] for case in SIMPLE_TEST_CASES])
-    r_expected_simple = np.array([case[1] for case in SIMPLE_TEST_CASES])
-
-    # Calculate r values for a continuous range of alpha values
-    alpha_range_simple = np.linspace(min(alphas_simple), max(alphas_simple), 100)
-    r_calculated_simple = np.array([
-        calculate_length_r(alpha, n_simple, g_simple, i_simple, j_simple, k_simple, s_simple)
-        for alpha in alpha_range_simple
-    ])
-
-    ax1.plot(alpha_range_simple, r_calculated_simple, 'b-', label='Calculated r')
-    ax1.scatter(alphas_simple, r_expected_simple, color='red', label='Test cases')
-    ax1.set_title('Simplified Geometry')
-    ax1.set_xlabel('Alpha (degrees)')
-    ax1.set_ylabel('Length r')
-    ax1.grid(True)
-    ax1.legend()
+    plot_geometry(ax1, SIMPLE_TEST_CASES, n_simple, g_simple, i_simple, j_simple, k_simple, s_simple, 'Simplified Geometry')
 
     # Plot real-world geometry
-    alphas_real = np.array([case[0] for case in REAL_TEST_CASES])
-    r_expected_real = np.array([case[1] for case in REAL_TEST_CASES])
-
-    # Calculate r values for a continuous range of alpha values
-    alpha_range_real = np.linspace(min(alphas_real), max(alphas_real), 100)
-    r_calculated_real = np.array([
-        calculate_length_r(alpha, n_real, g_real, i_real, j_real, k_real, s_real)
-        for alpha in alpha_range_real
-    ])
-
-    ax2.plot(alpha_range_real, r_calculated_real, 'b-', label='Calculated r')
-    ax2.scatter(alphas_real, r_expected_real, color='red', label='Test cases')
-    ax2.set_title('Real-world Geometry')
-    ax2.set_xlabel('Alpha (degrees)')
-    ax2.set_ylabel('Length r')
-    ax2.grid(True)
-    ax2.legend()
-
+    plot_geometry(ax2, REAL_TEST_CASES, n_real, g_real, i_real, j_real, k_real, s_real, 'Real-world Geometry')
     plt.tight_layout()
 
     # Ensure the artifacts directory exists
