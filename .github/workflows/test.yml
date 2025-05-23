@@ -27,10 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run tests
-      run: |
-        pytest tests/ --cov=src
-
     - name: Generate plot
       run: |
         python -m src.plot
@@ -41,3 +37,7 @@ jobs:
         name: plot
         path: artifacts/plot.png
         retention-days: 30
+
+    - name: Run tests
+      run: |
+        pytest tests/ --cov=src
